@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('69ee1afec6bbd9820c4b968c9ed325cf');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '차향준님(수험번호21200120)의 전기기사 실기시험 합격을 축하드립니다.
+지금 국가기술자격증을 인터넷으로 편리하게 발급받으세요. 큐넷(www.Q-net.or.kr)에서 신청하고 직접 출력(상장형) 또는 원하는 주소지로 배송(수첩형)받으세요.(1644-8000)',
+        description: 'Q-net',
+        imageUrl:
+          'https://mblogthumb-phinf.pstatic.net/MjAyMTA2MDJfMjI3/MDAxNjIyNTgzNTA2Mjc0._bn9gxrsOQCKQ6zY4u5qJ7Ys8UfVyTtDM3V2mvt0ZkUg.7rvKCYeqtgV5doRnrUf0ng-FXK0kMcotcCifjDp7JiQg.JPEG.prinssjune/DF8BDEDC-57C6-42D9-929D-EFAF4F29F270.jpeg?type=w800',
+        link: {
+          mobileWebUrl: 'http://www.q-net.or.kr',
+          webUrl: 'http://www.q-net.or.kr',
+        },
+      },
+      buttons: [
+        {
+          title: '모바일 큐넷(앱)연결',
+          link: {
+            mobileWebUrl: 'http://www.q-net.or.kr',
+            webUrl: 'http://www.q-net.or.kr',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
